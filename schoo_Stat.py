@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 08e75b0ac6e8c96093812d0d5c748b007c016f9a
 school_info = {
     'California State Monterey Bay' : { 
             'total_admitted':15561,
@@ -26,7 +31,11 @@ school_info = {
             'Out_cost': 18012.00
         
     },
+<<<<<<< HEAD
     'University of California Irvine': { 
+=======
+    'University of California Irvine':{ 
+>>>>>>> 08e75b0ac6e8c96093812d0d5c748b007c016f9a
             'total_admitted':71775,
             'total_accepted':27764,
             'accept_perc': (27764 / 71775),
