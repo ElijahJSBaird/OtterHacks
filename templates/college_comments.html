@@ -28,9 +28,27 @@ p {
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
-
+div {
+    height: 350px;
+    width: 250px;
+    overflow: auto;
+    padding: 20px 30px;
+    margin: auto;
+    margin-top: 5%;
+    background-image: url("http://celestial6.com/stuff/fades/hover.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 </style>
 <div class="jumbotron">
+<<<<<<< HEAD
+    <img src='static/campus_pics/CSUMontereyBay.png' style="width:400px;height:250px;">
+  <h1>{{params.college}}</h1>      
+  <p> Statistics:</p>
+  <p>Student Stories:</p>
+  <img class='img-circle' src={{params.image}} height="100px" width="100px"><p>{{params.name}}</p>
+  <p>{{params.comment}}</p>
+=======
     <img src='static/campus_pics/Monterey.png' style="width:400px;height:250px;">
   <h1>{{parameters.college}}</h1>      
   <p> Statistics:</p>
@@ -41,6 +59,7 @@ p {
 
   
   
+>>>>>>> 08e75b0ac6e8c96093812d0d5c748b007c016f9a
 </div>
 </body>
 </html>

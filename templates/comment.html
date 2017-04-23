@@ -24,17 +24,25 @@ p {
     background-size: cover;
     background-repeat: no-repeat;
 }
+textarea {
+    max-width: 30%;
+    max-height: 50%;
+}
+
+input {
+    max-width: 30%;
+}
 
 </style>
 <div class="jumbotron">
 <form method='post' action = '/comment' enctype="multipart/form-data">
-  Image: <input type="file" name='image' accept="image/*" capture="camera" />
-  Name: <input type='text' name='name' id='name' /><br><br>
+  Profile Image: <input type="file" name='image' accept="image/*" capture="camera" /><br>
+  Name: <input type='text' name='name' id='name' placeholder="First, Last"/><br><br>
 
   Email: <input type='text' name='email' id='email' /><br><br>
 
-  Comment:<br>
-  <textarea name='comment' id='comment'></textarea><br><br>
+  Experience/Comment(s):<br>
+  <textarea class="form-control" name='comment' id='comment' rows="5"></textarea><br><br>
 
   <input type='submit' value='Submit' />
 </form>
