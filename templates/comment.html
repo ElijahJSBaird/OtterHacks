@@ -9,9 +9,6 @@
 </head>
 <body>
 <style>
-body {
-    text-align: center;
-}
 h1 {
     color: black;
     text-align: left;
@@ -22,19 +19,25 @@ p {
 }
 .jumbotron {
     margin-bottom: 0px;
-    background-image: url(/static/CSUMontereyBay.png);
+    background-image: url(/static/form.png);
     background-position: 0% 25%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
 </style>
 <div class="jumbotron">
-  <h1>California State University, Monterey Bay</h1>      
-  <p> Statistics:</p>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  to keep the page from shorting out
+<form method='post' action = '/comment' enctype="multipart/form-data">
+  Image: <input type="file" name='image' accept="image/*" capture="camera" />
+  Name: <input type='text' name='name' id='name' /><br><br>
+
+  Email: <input type='text' name='email' id='email' /><br><br>
+
+  Comment:<br>
+  <textarea name='comment' id='comment'></textarea><br><br>
+
+  <input type='submit' value='Submit' />
+</form>
 </div>
-</body>
+<br><br><br><br><br><br><br>
 </html>
