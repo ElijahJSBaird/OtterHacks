@@ -1,7 +1,9 @@
 # main py file to run flask
 from flask import *
+from schoo_Stat import school_info
 import os # library for system functions
 from werkzeug.utils import secure_filename
+from samples import *
 
 app = Flask(__name__) # initializes app
 UPLOAD_FOLDER = 'static/people'
@@ -14,14 +16,16 @@ colleges = {
     "CSU Monterey Bay" : {'data' : {}, "comments" : {}, 'counter' : 0, 'picture' : 'static/campus_pics/Monterey.png'},
     "San Jose State" : {'data' : {}, "comments" : {}, 'counter' : 0, 'picture' : 'static/campus_pics/CSUMontereyBay.png'},
     "San Diego State" : {'data' : {}, "comments" : {}, 'counter' : 0, 'picture' : 'static/campus_pics/CSUMontereyBay'},
-    "CalPoly" : {'data' : {}, "comments" : {}, 'counter' : 0, 'picture' : 'static/campus_pics/CSUMontereyBay'},
     "UC Berkeley" : {'data' : {}, "comments" : {}, 'counter' : 0, 'picture' : 'static/campus_pics/CSUMontereyBay'},
     "UC Davis" : {'data' : {}, "comments" : {}, 'counter' : 0, 'picture' : 'static/campus_pics/CSUMontereyBay'},
-    "CSU Long Beach" : {'data' : {}, "comments" : {}, 'counter' : 0, 'picture' : 'static/campus_pics/CSUMontereyBay'}
+    "UC Irvine" : {'data' : {}, "comments" : {}, 'counter' : 0, 'picture' : 'static/campus_pics/CSUMontereyBay'}
 }
+
+colleges = call_samples(colleges)
+
 class selected():
     selected_college = ""
-
+    stats = school_info
 x = selected()
 
 #Homepage#######################################
@@ -37,7 +41,12 @@ def choose_college():
 
 @app.route("/college")
 def college():
-    params = {'college' : x.selected_college, 'image' : colleges[x.selected_college]['picture']}
+    #params = {'college' : x.selected_college, 'image' : colleges[x.selected_college]['picture']}
+    params = {}
+    for i in range(1,4):
+        params[i] = colleges[x.selected_college]['comments'][i]
+    print params
+    params['college'] = x.selected_college
     return render_template("college.html", params=params)
 
 @app.route('/comment') # homepage route
@@ -56,9 +65,13 @@ def take_comment():
     path = '/static/people/' + filename
     print path
     colleges[x.selected_college]['comments'][1] = {'name' : name, 'comment' : comment, 'email' : email, 'image' : path}
-    parameters = colleges[x.selected_college]['comments'][1]
-    parameters['college'] = x.selected_college
-    return render_template("college_comments.html", parameters=parameters)
+    return redirect(url_for('college'))
+    # parameters = {}
+    # for i in range(1,4):
+    #     parameters[i] = colleges[x.selected_college]['comments'][i]
+    # print parameters
+    # parameters['college'] = x.selected_college
+    # return render_template("college_comments.html", parameters=parameters)
 
 #Checking if run from user######################
 if __name__ == '__main__':
@@ -67,3 +80,8 @@ if __name__ == '__main__':
         host=os.getenv("IP", "0.0.0.0"),
         debug=True
         )
+
+# fix image link in comments
+# attach stories to college.html
+# make campuses
+# create logo key in college dictionary
