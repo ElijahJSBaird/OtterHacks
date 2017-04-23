@@ -1,11 +1,13 @@
-from pylab import *
-import six
-from six.moves import xrange, zip
+"""
+Make a pie chart - see
+http://matplotlib.sf.net/matplotlib.pylab.html#-pie for the docstring.
 
-if six.PY2:
-    from urllib.request import urlopen
-else:
-    from urllib2 import urlopen
+This example shows a basic pie chart with labels optional features,
+like autolabeling the percentage, offsetting a slice with "explode",
+adding a shadow, and changing the starting angle.
+
+"""
+from pylab import *
 
 # make a square figure and axes
 figure(1, figsize=(6,6))
