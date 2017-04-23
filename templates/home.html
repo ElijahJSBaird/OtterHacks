@@ -22,32 +22,39 @@ p {
 }
 .jumbotron {
     margin-bottom: 0px;
+    height: 950px;
+    width: 1900px;
     background-image: url(/static/home.png);
-    background-position: 0% 25%;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+div {
+        width: 750px;
+        overflow: auto;
+        padding: 20px 30px;
+        margin: auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+}
 
 </style>
 <div class="jumbotron">
-  <h1>Title</h1>      
-  <p> * Mission Statement:</p>
+  <div><h1>Celp!</h1>      
+  <p> * Mission Statement: Choosing a college can be tough. Celp's mission is to connect students and their dream schools; 
+alongside having current students share their experiences, our website provides perspective, and we push to enrich 
+their stay at the college they will soon attend. Despite the other college reviews sites, 
+Celp brings honest reviews from current students and alumni based on the college of the users choosing</p></div>
   <br><br><br>
   <form action='/' method="post" >
      <select style="width:30%;align:center;" name='college'>
       <option value="CSU Monterey Bay">California State University, Monterey Bay</option>
-      <option value="CSU Long Beach">California State University, Long Beach</option>
       <option value="San Jose State">San Jose State University</option>
       <option value="San Diego State">San Diego State University</option>
       <option value="UC Berkeley">University of California, Berkeley</option>
       <option value="UC Davis">University of California, Davis</option>
       <option value="UC Irvine">University of California, Irvine</option>
-<<<<<<< HEAD
-=======
-
->>>>>>> 08e75b0ac6e8c96093812d0d5c748b007c016f9a
     </select>
     <input type="submit" value="Submit">
   </form>
