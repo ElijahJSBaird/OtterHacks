@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<style>
+body {
+    text-align: center;
+}
+h1 {
+    color: black;
+    text-align: center;
+}
+p {
+    color: black;
+    text-align: center;
+}
+.jumbotron {
+    margin-bottom: 0px;
+    background-image: url(/static/CSUMontereyBay.png);
+    background-position: 0% 25%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+</style>
+<div class="jumbotron">
+    <img src='static/campus_pics/CSUMontereyBay.png' style="width:400px;height:250px;">
+  <h1>{{parameters.college}}</h1>      
+  <p> Statistics:</p>
+  <p>Student Stories:</p>
+  <img class='img-circle' src={{parameters.image}} height="100px" width="100px"><p>{{parameters.name}}</p>
+  <p>{{parameters.comment}}</p>
+  
+
+  
+  
+</div>
+</body>
+</html>
