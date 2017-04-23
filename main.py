@@ -1,5 +1,6 @@
 # main py file to run flask
 from flask import *
+from schoo_Stat import school_info
 import os # library for system functions
 from werkzeug.utils import secure_filename
 
@@ -21,12 +22,13 @@ colleges = {
 }
 class selected():
     selected_college = ""
-
+    stats = school_info
 x = selected()
 
 #Homepage#######################################
 @app.route('/') # homepage route
 def home():
+    print x.stats
     return render_template("home.html") # renders homepage
 
 @app.route('/', methods=["POST"]) # homepage route

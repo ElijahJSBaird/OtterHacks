@@ -1,15 +1,65 @@
 
 
 school_info = {
-    'California State Monterey Bay' : { 'total_admitted':7576, 'total_admitted_male': 2343, 'total_admitted_female': 5233, 'grad_rate_4': 21, 'grad_rate_5': 46, 'grad_rate_6': 53},
-    'San Diego State University': { 'total_admitted': 20321 , 'total_admitted_male': 8506, 'total_admitted_female': 11815, 'grad_rate_4': 30, 'grad_rate_5': 59, 'grad_rate_6': 68},
-    'San Jose State University': { 'total_admitted': 16890, 'total_admitted_male':8022, 'total_admitted_female': 8868, 'grad_rate_4': 9, 'grad_rate_5': 39, 'grad_rate_6': 57},
-    'California State Polytechnic': { 'total_admitted':13307, 'total_admitted_male': 6198, 'total_admitted_female': 7109, 'grad_rate_4': 15, 'grad_rate_5': 44, 'grad_rate_6': 63},
-    'California State Long Beach':{ 'total_admitted':19650, 'total_admitted_male':7630, 'total_admitted_female':12020, 'grad_rate_4':16, 'grad_rate_5': 49, 'grad_rate_6': 67},
-    'University of California Berkeley':{ 'total_admitted':13320, 'total_admitted_male':6082, 'total_admitted_female': 7238, 'grad_rate_4': 73, 'grad_rate_5': 89, 'grad_rate_6': 92},
-    'University of California Davis': { 'total_admitted':24518, 'total_admitted_male': 9840, 'total_admitted_female': 14678, 'grad_rate_4': 58, 'grad_rate_5': 82, 'grad_rate_6': 85}
+    'California State Monterey Bay' : { 
+            'total_admitted':15561,
+            'total_accepted':7576,
+            'accept_perc': (7576 / 15561),
+            'St_Ratio_Fac': 22,
+            'In_cost': 5963.00,
+            'Out_cost': 17123.00
+        
+    },
+    'San Diego State University': { 
+            'total_admitted':59051,
+            'total_accepted':20321,
+            'accept_perc': (20321 / 59051),
+            'St_Ratio_Fac': 28,
+            'In_cost': 6578.00,
+            'Out_cost': 17738.00
+        
+    },
+    'San Jose State University': { 
+            'total_admitted':30584,
+            'total_accepted':16890,
+            'accept_perc': (16890 / 30584),
+            'St_Ratio_Fac': 27,
+            'In_cost': 6852.00,
+            'Out_cost': 18012.00
+        
+    },
+    'California State Polytechnic': { 
+            'total_admitted':33855,
+            'total_accepted':13307,
+            'accept_perc': (13307 / 33855),
+            'St_Ratio_Fac': 27,
+            'In_cost': 6125.00,
+            'Out_cost': 17852.00
+        
+    },
+    'California State Long Beach':{ 
+            'total_admitted':58109,
+            'total_accepted':19650,
+            'accept_perc': (19650 / 58109),
+            'St_Ratio_Fac': 24,
+            'In_cost': 6052.00,
+            'Out_cost':17212.00
+        
+    },
+    'University of California Berkeley':{ 
+            'total_admitted':78893,
+            'total_accepted':13320,
+            'accept_perc': (13320 / 78893),
+            'St_Ratio_Fac': 17,
+            'In_cost': 12874.00,
+            'Out_cost':35752.00
+        
+    },
+    'University of California Davis': { 
+            'total_admitted':64602,
+            'total_accepted':24518,
+            'accept_perc': (24518 / 64602),
+            'St_Ratio_Fac': 18,
+            'In_cost': 13877.00,
+            'Out_cost':36755.00},
 }
-
-def school_data(school_info, college):
-    stats = data[college]
-    
