@@ -16,7 +16,6 @@ colleges = {
     "CSU Monterey Bay" : {'data' : {}, "comments" : {}, 'counter' : 0, 'picture' : 'static/campus_pics/Monterey.png'},
     "San Jose State" : {'data' : {}, "comments" : {}, 'counter' : 0, 'picture' : 'static/campus_pics/CSUMontereyBay.png'},
     "San Diego State" : {'data' : {}, "comments" : {}, 'counter' : 0, 'picture' : 'static/campus_pics/CSUMontereyBay'},
-    "CalPoly" : {'data' : {}, "comments" : {}, 'counter' : 0, 'picture' : 'static/campus_pics/CSUMontereyBay'},
     "UC Berkeley" : {'data' : {}, "comments" : {}, 'counter' : 0, 'picture' : 'static/campus_pics/CSUMontereyBay'},
     "UC Davis" : {'data' : {}, "comments" : {}, 'counter' : 0, 'picture' : 'static/campus_pics/CSUMontereyBay'},
     "UC Irvine" : {'data' : {}, "comments" : {}, 'counter' : 0, 'picture' : 'static/campus_pics/CSUMontereyBay'}
@@ -42,7 +41,12 @@ def choose_college():
 
 @app.route("/college")
 def college():
-    params = {'college' : x.selected_college, 'image' : colleges[x.selected_college]['picture']}
+    #params = {'college' : x.selected_college, 'image' : colleges[x.selected_college]['picture']}
+    params = {}
+    for i in range(1,4):
+        params[i] = colleges[x.selected_college]['comments'][i]
+    print params
+    params['college'] = x.selected_college
     return render_template("college.html", params=params)
 
 @app.route('/comment') # homepage route
@@ -61,12 +65,13 @@ def take_comment():
     path = '/static/people/' + filename
     print path
     colleges[x.selected_college]['comments'][1] = {'name' : name, 'comment' : comment, 'email' : email, 'image' : path}
-    parameters = {}
-    for i in range(1,4):
-        parameters[i] = colleges[x.selected_college]['comments'][i]
-    print parameters
-    parameters['college'] = x.selected_college
-    return render_template("college_comments.html", parameters=parameters)
+    return redirect(url_for('college'))
+    # parameters = {}
+    # for i in range(1,4):
+    #     parameters[i] = colleges[x.selected_college]['comments'][i]
+    # print parameters
+    # parameters['college'] = x.selected_college
+    # return render_template("college_comments.html", parameters=parameters)
 
 #Checking if run from user######################
 if __name__ == '__main__':
