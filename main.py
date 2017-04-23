@@ -18,7 +18,7 @@ colleges = {
     "CalPoly" : {'data' : {}, "comments" : {}, 'counter' : 0, 'picture' : 'static/campus_pics/CSUMontereyBay'},
     "UC Berkeley" : {'data' : {}, "comments" : {}, 'counter' : 0, 'picture' : 'static/campus_pics/CSUMontereyBay'},
     "UC Davis" : {'data' : {}, "comments" : {}, 'counter' : 0, 'picture' : 'static/campus_pics/CSUMontereyBay'},
-    "CSU Long Beach" : {'data' : {}, "comments" : {}, 'counter' : 0, 'picture' : 'static/campus_pics/CSUMontereyBay'}
+    "UC Irvine" : {'data' : {}, "comments" : {}, 'counter' : 0, 'picture' : 'static/campus_pics/CSUMontereyBay'}
 }
 class selected():
     selected_college = ""

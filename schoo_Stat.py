@@ -28,22 +28,13 @@ school_info = {
             'Out_cost': 18012.00
         
     },
-    'California State Polytechnic': { 
-            'total_admitted':33855,
-            'total_accepted':13307,
-            'accept_perc': (13307 / 33855),
-            'St_Ratio_Fac': 27,
-            'In_cost': 6125.00,
-            'Out_cost': 17852.00
-        
-    },
-    'California State Long Beach':{ 
-            'total_admitted':58109,
-            'total_accepted':19650,
-            'accept_perc': (19650 / 58109),
-            'St_Ratio_Fac': 24,
-            'In_cost': 6052.00,
-            'Out_cost':17212.00
+    'University of California Irvine':{ 
+            'total_admitted':71775,
+            'total_accepted':27764,
+            'accept_perc': (27764 / 71775),
+            'St_Ratio_Fac': 19,
+            'In_cost': 13122.00,
+            'Out_cost':36000.00
         
     },
     'University of California Berkeley':{ 
